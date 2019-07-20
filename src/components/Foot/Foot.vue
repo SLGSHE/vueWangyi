@@ -49,6 +49,7 @@ export default {
     position fixed
     bottom 0
     left 0
+    z-index 12
     .footList
       display flex
       width 750px
