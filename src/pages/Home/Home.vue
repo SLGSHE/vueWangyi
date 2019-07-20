@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="Home">
     <homeheader />
     <homecontent />
   </div>
@@ -17,6 +17,9 @@ export default {
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-
+#Home
+  width 100%
+  height 5000px
+  background-color #EEEEEE
  
 </style>

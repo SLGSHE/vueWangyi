@@ -220,13 +220,171 @@
       </div>
       <div class="personModuleWrapper swiper-container">
         <div class="swiper-wrapper personWrapperList">
+          <!-- 每一个轮播的区域 -->
           <div class="personSwiper-slide swiper-slide">
-            <a href="javascript:" class="personSwiper-banner">
-              <img src="../HomeContent/images/1.jpg" />
-            </a>
+            <ul class="personBannerList">
+              <!-- 每个区域有三份图片 -->
+              <li class="personBannerItem">
+                <a href="javascript:" class="personItemA">
+                  <img
+                    class="personItemImg"
+                    src="https://yanxuan.nosdn.127.net/f9106a04b711aa69c3ecb4015ed7b609.png?imageView&quality=65&thumbnail=330x330"
+                  />
+                  <span class="personItemTitle">男/女 色画轻主义人字凉...</span>
+                  <span class="personItemPrice">￥100</span>
+                </a>
+              </li>
+              <li class="personBannerItem">
+                <a href="javascript:" class="personItemA">
+                  <img
+                    class="personItemImg"
+                    src="https://yanxuan.nosdn.127.net/b2a64915d5a9ae04964de87901f284eb.png?imageView&quality=65&thumbnail=330x330"
+                  />
+                  <span class="personItemTitle">男/女 色画轻主义人字凉...</span>
+                  <span class="personItemPrice">￥100</span>
+                </a>
+              </li>
+              <li class="personBannerItem">
+                <a href="javascript:" class="personItemA">
+                  <img
+                    class="personItemImg"
+                    src="https://yanxuan.nosdn.127.net/79fb28d0a101f704d2fa3665273dbc1a.png?imageView&quality=65&thumbnail=330x330"
+                  />
+                  <span class="personItemTitle">男/女 色画轻主义人字凉...</span>
+                  <span class="personItemPrice">￥100</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="personSwiper-slide swiper-slide">
+            <ul class="personBannerList">
+              <!-- 每个区域有三份图片 -->
+              <li class="personBannerItem">
+                <a href="javascript:" class="personItemA">
+                  <img
+                    class="personItemImg"
+                    src="https://yanxuan.nosdn.127.net/f9106a04b711aa69c3ecb4015ed7b609.png?imageView&quality=65&thumbnail=330x330"
+                  />
+                  <span class="personItemTitle">男/女 色画轻主义人字凉...</span>
+                  <span class="personItemPrice">￥100</span>
+                </a>
+              </li>
+              <li class="personBannerItem">
+                <a href="javascript:" class="personItemA">
+                  <img
+                    class="personItemImg"
+                    src="https://yanxuan.nosdn.127.net/b2a64915d5a9ae04964de87901f284eb.png?imageView&quality=65&thumbnail=330x330"
+                  />
+                  <span class="personItemTitle">男/女 色画轻主义人字凉...</span>
+                  <span class="personItemPrice">￥100</span>
+                </a>
+              </li>
+              <li class="personBannerItem">
+                <a href="javascript:" class="personItemA">
+                  <img
+                    class="personItemImg"
+                    src="https://yanxuan.nosdn.127.net/79fb28d0a101f704d2fa3665273dbc1a.png?imageView&quality=65&thumbnail=330x330"
+                  />
+                  <span class="personItemTitle">男/女 色画轻主义人字凉...</span>
+                  <span class="personItemPrice">￥100</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="personSwiper-slide swiper-slide">
+            <ul class="personBannerList">
+              <!-- 每个区域有三份图片 -->
+              <li class="personBannerItem">
+                <a href="javascript:" class="personItemA">
+                  <img
+                    class="personItemImg"
+                    src="https://yanxuan.nosdn.127.net/f9106a04b711aa69c3ecb4015ed7b609.png?imageView&quality=65&thumbnail=330x330"
+                  />
+                  <span class="personItemTitle">男/女 色画轻主义人字凉...</span>
+                  <span class="personItemPrice">￥100</span>
+                </a>
+              </li>
+              <li class="personBannerItem">
+                <a href="javascript:" class="personItemA">
+                  <img
+                    class="personItemImg"
+                    src="https://yanxuan.nosdn.127.net/b2a64915d5a9ae04964de87901f284eb.png?imageView&quality=65&thumbnail=330x330"
+                  />
+                  <span class="personItemTitle">男/女 色画轻主义人字凉...</span>
+                  <span class="personItemPrice">￥100</span>
+                </a>
+              </li>
+              <li class="personBannerItem">
+                <a href="javascript:" class="personItemA">
+                  <img
+                    class="personItemImg"
+                    src="https://yanxuan.nosdn.127.net/9d581d4ec02cf86ff2a05cf81868f159.png?imageView&quality=65&thumbnail=330x330"
+                  />
+                  <span class="personItemTitle">男/女 色画轻主义人字凉...</span>
+                  <span class="personItemPrice">￥100</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="personSwiper-slide swiper-slide">
+            <ul class="personBannerList">
+              <!-- 每个区域有三份图片 -->
+              <li class="personBannerItem">
+                <a href="javascript:" class="personItemA">
+                  <img
+                    class="personItemImg"
+                    src="https://yanxuan.nosdn.127.net/f9106a04b711aa69c3ecb4015ed7b609.png?imageView&quality=65&thumbnail=330x330"
+                  />
+                  <span class="personItemTitle">男/女 色画轻主义人字凉...</span>
+                  <span class="personItemPrice">￥100</span>
+                </a>
+              </li>
+              <li class="personBannerItem">
+                <a href="javascript:" class="personItemA">
+                  <img
+                    class="personItemImg"
+                    src="https://yanxuan.nosdn.127.net/d3fdafc1abe1b0835c72339a554c0281.png?imageView&quality=65&thumbnail=330x330"
+                  />
+                  <span class="personItemTitle">男/女 色画轻主义人字凉...</span>
+                  <span class="personItemPrice">￥100</span>
+                </a>
+              </li>
+              <li class="personBannerItem">
+                <a href="javascript:" class="personItemA">
+                  <img
+                    class="personItemImg"
+                    src="https://yanxuan.nosdn.127.net/9e0a5f2b18d2b92e51f96c025fc12850.png?imageView&quality=65&thumbnail=330x330"
+                  />
+                  <span class="personItemTitle">男/女 色画轻主义人字凉...</span>
+                  <span class="personItemPrice">￥100</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!--限时购 -->
+    <div class="fashionSaleModule">
+      <div class="saleModuleTitle">
+        <!-- 左 -->
+        <div class="saleShop">
+          <div class="saleShopLeft">
+            <span>限时购</span>
+          </div>
+          <div class="saleShopRight">
+            <span class="saleHours">01</span>
+            <span class="saleColon">:</span>
+            <span class="saleMins">53</span>
+            <span class="saleColon">:</span>
+            <span class="saleSecs">04</span>
+          </div>
+        </div>
+        <div class="saleMore">
+          <span class="saleMoreTxt">更多</span>
+          <i class="iconfont iconarrow-right"></i>
+        </div>
       </div>
     </div>
   </div>
@@ -387,17 +545,16 @@ export default {
       width 750px
       height 470px
       margin-bottom 20px
+      background-color #fff
       .moduleTitle
         width 750px
         height 100px
         box-sizing border-box
         padding 0px 30px
-        background-color pink
         .moduleTitleLeft
           float left
           width 128px
           height 100px
-          background-color green
           font-size 32.0173px
           line-height 100px
           .moduleTitleLeftTxt
@@ -414,15 +571,83 @@ export default {
             justify-content center
             align-items flex-start
             flex-wrap wrap
-            .personSwiper-banner
-              width 100%
-              height 100%
-              img 
-                width 100%
-                height 100%
+            .personBannerList
+              .personBannerItem
+                width 216px
+                height 300px
+                float left
+                margin-right 15px
+                .personItemA
+                  display block
+                  width 216px
+                  height 300px
+                  font-size 24.0148px
+                  .personItemImg
+                    width 216px
+                    height 216px
+                    background-color #f5f5f5
+                    margin-bottom 5px
+                  .personItemPrice
+                    color #b4282d
         .swiper-pagination
           >span.swiper-pagination-bullet-active
             background #02a774  
+    .fashionSaleModule
+    // 限时购
+      width 750px
+      height 699.5px
+      background-color pink
+      box-sizing border-box
+      .saleModuleTitle
+        height 100px
+        background-color green
+        padding 0px 30px
+        line-height 100px
+        // overflow hidden
+        .saleShop
+          width 289px
+          height 100.76px
+          background-color pink
+          float left
+          .saleShopLeft
+            width 96px
+            height 41px
+            color #333
+            font-size 32.0173px
+            white-space nowrap
+            float left
+          .saleShopRight
+            width 181.6px
+            height 100px
+            background-color red
+            float right
+            vertical-align middle
+            .saleHours
+              width 36px
+              height 36px
+              display inline-block
+              background-color #333
+              color #fff
+              font-size 24.0128px
+              line-height 36px
+              text-align center
+              
+        .saleMore
+          width 77.04px
+          height 100px
+          background-color red
+          float right
+          display flex
+          .saleMoreTxt
+            font-size 28.0147px
+            white-space nowrap
+          .iconarrow-right
+            display inline-block
+            vertical-align middle
+            width 13px
+            height 23.01px
+            font-size 14px
+          
 
  
 </style>
