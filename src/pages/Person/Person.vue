@@ -1,9 +1,16 @@
 <template>
-  <div>person</div>
+  <div>
+    <person />
+  </div>
 </template>
 
 <script type="text/ecmascript-6">
-export default {};
+import person from "../../components/Person/Person.vue";
+export default {
+  components: {
+    person
+  }
+};
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>

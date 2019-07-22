@@ -387,6 +387,21 @@
         </div>
       </div>
     </div>
+    <!-- 底部版权区 -->
+    <div class="footWraper">
+      <div class="footWraperContent">
+        <div class="bd">
+          <a href="javascript:" class='goApp'>下载APP</a>
+           <a href="javascript:" class='goWeb'>电脑版</a>
+        </div>
+        <p class='copyRight'>
+          <span>网易公司版权所有 © 1997-</span>
+          <span>2019</span>
+          <br>
+          <span>食品经营许可证：JY13301080111719</span>
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -631,7 +646,6 @@ export default {
               font-size 24.0128px
               line-height 36px
               text-align center
-              
         .saleMore
           width 77.04px
           height 100px
@@ -647,6 +661,47 @@ export default {
             width 13px
             height 23.01px
             font-size 14px
+    .footWraper
+    // 底部版权区
+      width 750px
+      height 245.08px
+      background-color #414141
+      border-top 1px solid rgba(0,0,0,.15)
+      text-align center
+      .footWraperContent
+        box-sizing border-box
+        // height 244.08px
+        width 100%
+        padding 54px 20px 28px 20px
+        margin-right auto
+        margin-left auto
+        .bd
+          width 710px
+          height 62px
+          margin-bottom 36px
+          .goApp
+            display inline-block
+            width 172px
+            height 62px
+            line-height 62px
+            border 1px solid #999
+            color #fff
+            font-size 24.0128px
+            margin-right 50px
+          .goWeb
+            display inline-block
+            width 172px
+            height 62px
+            line-height 62px
+            border 1px solid #999
+            color #fff
+            font-size 24.0128px
+        .copyRight
+          width 710px
+          height 64px
+          font-size 24.0128px
+          color #fff
+         
           
 
  
