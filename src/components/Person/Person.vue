@@ -123,7 +123,7 @@ export default {};
           .phoneLogin
             width 670px
             height 94px
-            background-color red
+            background-color #b4282d
             margin-bottom 32px
             color #fff
             line-height 94px
@@ -158,7 +158,6 @@ export default {};
       .thirdWrap
         width 750px
         height 40px
-        background #bfa
         position absolute
         left 0px
         bottom 104px
