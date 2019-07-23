@@ -9,23 +9,38 @@ export default [
   {
     path: '/Home',
     component: Home,
+    meta: {
+      showFooter: true
+    }
 
   },
   {
     path: '/List',
-    component: List
+    component: List,
+    meta: {
+      showFooter: true
+    }
   },
   {
     path: '/Object',
-    component: Object
+    component: Object,
+    meta: {
+      showFooter: true
+    }
   },
   {
     path: '/Person',
-    component: Person
+    component: Person,
+    meta: {
+      showFooter: false
+    }
   },
   {
     path: '/ShopCart',
-    component: ShopCart
+    component: ShopCart,
+    meta: {
+      showFooter: true
+    }
   },
   {
     path: '/',

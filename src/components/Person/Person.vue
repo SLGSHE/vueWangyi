@@ -12,13 +12,13 @@
       </div>
     </div>
     <!-- 个人中心主体 -->
-    <div class="personLoginType">
+    <div class="personLoginType" v-show="isShowPersonLogin">
       <div class="cont">
         <div class="logWrap">
           <img src="https://yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" />
         </div>
         <div class="btnWrap">
-          <div class="phoneLogin">
+          <div class="phoneLogin" @click="isShowPhoneLogin">
             <i class="iconfont iconshouji"></i>
             <span class="phoneLoginTxt">手机号码登录</span>
           </div>
@@ -58,7 +58,18 @@
 
 <script type="text/ecmascript-6">
 // 个人中心
-export default {};
+export default {
+  data() {
+    return {
+      isShowPersonLogin: true
+    };
+  },
+  methods: {
+    isShowPhoneLogin() {
+      this.isShowPersonLogin = false;
+    }
+  }
+};
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
