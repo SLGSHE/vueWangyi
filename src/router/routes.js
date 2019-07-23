@@ -4,6 +4,7 @@ import Object from '../pages/Object/Object.vue'
 import Person from '../pages/Person/Person.vue'
 import ShopCart from '../pages/ShopCart/ShopCart.vue'
 
+import homesearch from '../pages/Search/HomeSearch.vue'
 
 export default [
   {
@@ -12,7 +13,6 @@ export default [
     meta: {
       showFooter: true
     }
-
   },
   {
     path: '/List',
@@ -41,6 +41,10 @@ export default [
     meta: {
       showFooter: true
     }
+  },
+  {
+    path: '/search',
+    component: homesearch
   },
   {
     path: '/',

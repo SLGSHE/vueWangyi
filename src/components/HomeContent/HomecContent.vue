@@ -668,6 +668,7 @@ export default {
       background-color #414141
       border-top 1px solid rgba(0,0,0,.15)
       text-align center
+      padding-bottom 98px
       .footWraperContent
         box-sizing border-box
         // height 244.08px

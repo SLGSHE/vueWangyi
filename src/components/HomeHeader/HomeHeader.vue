@@ -3,11 +3,11 @@
     <!-- 头部 -->
     <header class="homeHeader">
       <a href="javascript:" class="logo"></a>
-      <div class="headerSearch">
+      <div class="headerSearch" @click="goSearch('/search')">
         <span class="iconfont iconfangdajing"></span>
         <span class="placeholider">搜索商品，共21768件商品</span>
       </div>
-      <div class="homeLogin">登录</div>
+      <div class="homeLogin" @click="goPerson('/person')">登录</div>
     </header>
     <!-- 横向滑动 -->
     <div class="scollNavBar">
@@ -43,6 +43,15 @@ export default {
     changeHandler(cur) {
       this.current = cur;
       console.log(cur);
+    },
+    goPerson(path) {
+      //点击去登录注册界面
+      this.$router.replace(path);
+    },
+    goSearch(path) {
+      //点击显示搜索界面
+      console.log("2");
+      this.$router.replace(path);
     }
   }
 };

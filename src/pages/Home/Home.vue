@@ -19,7 +19,7 @@ export default {
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 #Home
   width 100%
-  height 5000px
+  height 100%
   background-color #EEEEEE
  
 </style>
