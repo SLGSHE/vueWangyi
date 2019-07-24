@@ -41,94 +41,10 @@
     <!-- 新品首发 超级会员等图片列表 -->
     <div class="newProductWraper">
       <ul class="newProductList">
-        <li class="newProductItem">
+        <li class="newProductItem" v-for="(item,index) in newProductArr" :key="index">
           <a href="javascript:" class="newProductA">
-            <img
-              class="newProductImg"
-              src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png"
-            />
-            <span class="newProductTxt">新品首发</span>
-          </a>
-        </li>
-        <li class="newProductItem">
-          <a href="javascript:" class="newProductA">
-            <img
-              class="newProductImg"
-              src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png"
-            />
-            <span class="newProductTxt">居家生活</span>
-          </a>
-        </li>
-        <li class="newProductItem">
-          <a href="javascript:" class="newProductA">
-            <img
-              class="newProductImg"
-              src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png"
-            />
-            <span class="newProductTxt">服饰鞋包</span>
-          </a>
-        </li>
-        <li class="newProductItem">
-          <a href="javascript:" class="newProductA">
-            <img
-              class="newProductImg"
-              src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png"
-            />
-            <span class="newProductTxt">美食酒水</span>
-          </a>
-        </li>
-        <li class="newProductItem">
-          <a href="javascript:" class="newProductA">
-            <img
-              class="newProductImg"
-              src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png"
-            />
-            <span class="newProductTxt">个护清洁</span>
-          </a>
-        </li>
-        <li class="newProductItem">
-          <a href="javascript:" class="newProductA">
-            <img
-              class="newProductImg"
-              src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png"
-            />
-            <span class="newProductTxt">母婴亲子</span>
-          </a>
-        </li>
-        <li class="newProductItem">
-          <a href="javascript:" class="newProductA">
-            <img
-              class="newProductImg"
-              src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png"
-            />
-            <span class="newProductTxt">运动旅行</span>
-          </a>
-        </li>
-        <li class="newProductItem">
-          <a href="javascript:" class="newProductA">
-            <img
-              class="newProductImg"
-              src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png"
-            />
-            <span class="newProductTxt">数码家电</span>
-          </a>
-        </li>
-        <li class="newProductItem">
-          <a href="javascript:" class="newProductA">
-            <img
-              class="newProductImg"
-              src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png"
-            />
-            <span class="newProductTxt">全球特色</span>
-          </a>
-        </li>
-        <li class="newProductItem">
-          <a href="javascript:" class="newProductA">
-            <img
-              class="newProductImg"
-              src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png"
-            />
-            <span class="newProductTxt">超级会员</span>
+            <img class="newProductImg" :src="item.picUrl" />
+            <span class="newProductTxt">{{item.text}}</span>
           </a>
         </li>
       </ul>
@@ -391,13 +307,13 @@
     <div class="footWraper">
       <div class="footWraperContent">
         <div class="bd">
-          <a href="javascript:" class='goApp'>下载APP</a>
-           <a href="javascript:" class='goWeb'>电脑版</a>
+          <a href="javascript:" class="goApp">下载APP</a>
+          <a href="javascript:" class="goWeb">电脑版</a>
         </div>
-        <p class='copyRight'>
+        <p class="copyRight">
           <span>网易公司版权所有 © 1997-</span>
           <span>2019</span>
-          <br>
+          <br />
           <span>食品经营许可证：JY13301080111719</span>
         </p>
       </div>
@@ -408,8 +324,15 @@
 <script type="text/ecmascript-6">
 import Swiper from "swiper";
 import "swiper/dist/css/swiper.min.css";
+import { reqHomeData } from "../../api/index";
 export default {
-  mounted() {
+  data() {
+    return {
+      newProductArr: [], //商品导航
+      personalShop: [] //私人订制
+    };
+  },
+  async mounted() {
     new Swiper(".swiper-container", {
       //direction: "vertical", // 垂直切换选项
       loop: true, // 循环模式选项
@@ -425,6 +348,11 @@ export default {
         el: ".swiper-pagination"
       }
     });
+
+    const result = await reqHomeData();
+    this.newProductArr = result.data.kingKongModule.kingKongList;
+    this.personalShop = result.data.personalShop;
+    console.log(this.personalShop);
   }
 };
 </script>

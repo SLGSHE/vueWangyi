@@ -2,6 +2,7 @@ import Vue from 'vue'
 import './cube-ui'
 import App from './App.vue'
 import 'amfe-flexible'
+import '../src/components/mockData/mockServe'
 
 // import { Swipe, SwipeItem } from 'vue-swipe';
 
