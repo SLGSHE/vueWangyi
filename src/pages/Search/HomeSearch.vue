@@ -5,7 +5,13 @@
         <div class="searchInput">
           <div class="sinput">
             <i class="iconfont iconfangdajing"></i>
-            <input type="text" placeholder="水感多效防晒凝露 SPF30" class="text" ref="clickinput" />
+            <input
+              type="text"
+              placeholder="水感多效防晒凝露 SPF30"
+              class="text"
+              @blur="searchValue"
+              v-model="search"
+            />
           </div>
         </div>
         <span class="cancel" @click="gohome('/home')">取消</span>
@@ -15,9 +21,9 @@
           <div class="hd">
             <h3 class="tit">热门搜索</h3>
           </div>
-          <div class="list" @click="click">
-            <a class="item">夏凉被82折起</a>
-            <a class="item">9.9元超值专区</a>
+          <div class="list">
+            <a class="item" v-for="(item,index) in seValue" :key="index">{{item}}</a>
+            <!-- <a class="item">9.9元超值专区</a>
             <a class="item">风扇</a>
             <a class="item">电动牙刷69元起</a>
             <a class="item">男士内裤</a>
@@ -27,8 +33,7 @@
             <a class="item">手机壳</a>
             <a class="item">时尚饰品49元起</a>
             <a class="item">行李箱</a>
-            <a class="item">水杯</a>
-            <!-- <a class="item">{{clickinput}}</a> -->
+            <a class="item">水杯</a>-->
           </div>
         </div>
       </div>
@@ -37,23 +42,27 @@
 </template>
 
 <script type="text/ecmascript-6">
+import { reqSearchValue } from "../../api";
 export default {
   data() {
     return {
-      // clickinput: ""
+      search: "", //搜索输入默认值为空
+      seValue: [] //搜索出的数据存放的地方
     };
   },
   methods: {
     gohome(path) {
       this.$router.replace(path);
-    },
-    click() {
-      // console.log(this.clickinput);
-      // console.log(this.$refs.clickinput.value);
+    }, //根据输入内容获取，并显示
+    async searchValue() {
+      const { search } = this;
+      const result = await reqSearchValue(search);
+      if (result.code === "200" && result.data) {
+        //请求成功且有数据
+        this.seValue = result.data;
+        console.log(this.seValue);
+      }
     }
-    // search(event) {
-    //   console.log(event.currentTarget.value);
-    // }
   }
 };
 </script>

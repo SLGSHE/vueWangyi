@@ -6,8 +6,8 @@
         <div class="mapHeaderContent">
           <a href="javascript:" class="iconfont iconfangzi"></a>
           <div class="mapFind">
-            <a class="find" href="javascript:">发现</a>
-            <a class="selection" href="javascript:">甄选家</a>
+            <a class="find" href="javascript:" :class="{active : show}" @click="find">发现</a>
+            <a class="selection" href="javascript:" :class="{active:!show}" @click="select">甄选家</a>
           </div>
           <div class="mapHeaderRight">
             <a href="javascript:" class="iconfont iconfangdajing"></a>
@@ -167,6 +167,8 @@
         </div>
       </div>
     </div>
+
+    <router-view />
   </div>
 </template>
 
@@ -174,6 +176,7 @@
 export default {
   data() {
     return {
+      show: true,
       current: "推荐",
       labels: [
         "推荐",
@@ -189,6 +192,13 @@ export default {
   methods: {
     changeHandler(cur) {
       this.current = cur;
+    },
+    find() {
+      if (!this.show) this.show = !this.show;
+    },
+    select() {
+      if (this.show) this.show = !this.show;
+      this.$router.replace("/select");
     }
   }
 };
@@ -228,14 +238,15 @@ export default {
             height 100px
             line-height 100px
             margin-left 40px
+            font-size 28px
+            a
+              &.active
+                color #b4282d
+                font-weight bold
+                font-size 40px
             .find
-              color #b4282d
               padding 0px 16px
-              font-weight bold
-              font-size 40px
             .selection
-              color #b4282d
-              font-size 28px
               color #7f7f7f
           .mapHeaderRight
             width 148px
