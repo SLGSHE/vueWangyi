@@ -72,7 +72,13 @@
           <div class="ursBoxContainer">
             <div class="ursBoxContent">
               <div class="inputBox">
-                <input type="tel" placeholder="请输入手机号" class="phone" />
+                <input
+                  type="tel"
+                  placeholder="请输入手机号"
+                  class="phone"
+                  @blur="phoneFormat"
+                  v-model="phoneNum"
+                />
               </div>
               <div class="duanXinLogin">
                 <div class="duanXinContent">
@@ -80,6 +86,7 @@
                   <div class="getDuanXin">获取验证码</div>
                 </div>
               </div>
+              <p class="phoneFormat" v-show="isphoneFormat">手机号格式错误</p>
               <div class="login">
                 <div class="loginWenTi">
                   <span class="wenTiLeft">遇到问题</span>
@@ -107,13 +114,20 @@
           <div class="ursBoxContainer">
             <div class="ursBoxContent">
               <div class="inputBox">
-                <input type="tel" placeholder="邮箱账号" class="phone" />
+                <input
+                  type="tel"
+                  placeholder="邮箱账号"
+                  class="phone"
+                  @blur="mailFocus"
+                  v-model="mailValue"
+                />
               </div>
               <div class="duanXinLogin">
                 <div class="duanXinContent">
                   <input type="text" placeholder="密码" class="duanxin" />
                 </div>
               </div>
+              <p class="phoneFormat" v-show="mailFormat">邮箱格式错误</p>
               <div class="login">
                 <div class="loginWenTi">
                   <span class="wenTiLeft">注册账号</span>
@@ -135,7 +149,13 @@
           <div class="ursBoxContainer">
             <div class="ursBoxContent">
               <div class="inputBox">
-                <input type="tel" placeholder="请输入手机号" class="phone" />
+                <input
+                  type="tel"
+                  placeholder="请输入手机号"
+                  class="phone"
+                  @blur="focusphone"
+                  v-model="phoneValue"
+                />
               </div>
               <div class="duanXinLogin">
                 <div class="duanXinContent">
@@ -147,6 +167,7 @@
                 <div class="inputBox">
                   <input type="tel" placeholder="请输入密码" class="phone pwd" />
                 </div>
+                <p class="phoneFormat" v-show="phoneFormatErr">手机号格式错误</p>
                 <div class="reqLogin">注册</div>
               </div>
             </div>
@@ -220,7 +241,13 @@ export default {
       isShowPhoneRegister: false, //手机号注册
       isShowMailRegisster: false, //邮箱账号注册
       isShowPersonHeader: true, //个人中西头部
-      loginWrap: false
+      loginWrap: false,
+      phoneNum: "", //手机号登录验证
+      isphoneFormat: false, //是否显示手机号验证提示的文本
+      mailValue: "", //邮箱号登陆输入的内容
+      mailFormat: false, //邮箱登录输入错误提式文本
+      phoneValue: "", //手机号注册输入内容
+      phoneFormatErr: false //手机号注册错误提示文本
     };
   },
   methods: {
@@ -266,6 +293,36 @@ export default {
     goShopCart(path) {
       //点击去购物车界面
       this.$router.replace(path);
+    }, //验证手机号登录输入验证
+    phoneFormat() {
+      const reg = /^1[3456789]\d{9}$/;
+      if (reg.test(this.phoneNum)) {
+        console.log("验证成功");
+        this.isphoneFormat = false;
+      } else {
+        this.isphoneFormat = true;
+        console.log("验证失败");
+      }
+    }, //验证邮箱登录输入内容
+    mailFocus() {
+      const email_reg = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
+      if (email_reg.test(this.mailValue)) {
+        console.log("邮箱验证通过");
+        this.mailFormat = false; //验证失败文本关闭
+      } else {
+        this.mailFormat = true; //验证失败文本显示
+        console.log("邮箱验证失败");
+      }
+    }, //手机号注册验证
+    focusphone() {
+      const reg = /^1[3456789]\d{9}$/;
+      if (reg.test(this.phoneValue)) {
+        console.log("手机号注册验证成功");
+        this.phoneFormatErr = false;
+      } else {
+        this.phoneFormatErr = true;
+        console.log("手机注册验证失败");
+      }
     }
   }
 };
@@ -419,6 +476,7 @@ export default {
                   width 600px
                   height 42px
                   margin 28px 0px
+                  outline none
               .duanXinLogin
                 width 670px
                 height 90px
@@ -433,6 +491,7 @@ export default {
                     height 42px
                     margin-right 180px
                     margin-top 10px
+                    outline none
                   .getDuanXin
                     width 168px
                     height 58px
@@ -440,6 +499,11 @@ export default {
                     color #333
                     font-size 28px
                     line-height 58px
+              .phoneFormat
+                color #b42b2d
+                font-size 24px
+                text-align left 
+                margin-top 10px
               .login
                 height 240px
                 .loginWenTi
